@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   output: 'export',
-
   basePath: '/0bliv.g1f',
   assetPrefix: '/0bliv.g1f/',
-
   trailingSlash: true,
-
-  images: {
-    unoptimized: true,
-  },
 };
+
+module.exports = nextConfig;
