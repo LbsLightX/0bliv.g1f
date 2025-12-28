@@ -28,12 +28,11 @@ const Home: NextPage = () => {
 			</Text>
 
 			<Center>
-				<Button
-					type='secondary'
-					onClick={() => router.push('${router.basePath}/character')}
-				>
-					Go!
-				</Button>
+				<a href="./character">
+  <Button type="secondary">
+    Go!
+  </Button>
+</a>
 			</Center>
 
 			<Page.Footer
