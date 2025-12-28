@@ -27,8 +27,8 @@ const renderGIF = async (props: Config) =>
 		const backgroundImage = new Image();
 		const characterSpritesheet = new Image();
 
-		backgroundImage.src = `/backgrounds/${props.background}.png`;
-		characterSpritesheet.src = `/spritesheets/characters/${props.character}.png`;
+		backgroundImage.src = `./backgrounds/${props.background}.png`;
+		characterSpritesheet.src = `./spritesheets/characters/${props.character}.png`;
 
 		await backgroundImage.decode();
 		await characterSpritesheet.decode();

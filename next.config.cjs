@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   basePath: '/0bliv.g1f',

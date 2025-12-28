@@ -11,20 +11,18 @@ const Emotion: NextPage = () => {
 	const character = router.query.character as string;
 	const [emotions, setEmotions] = useState<string[]>([]);
 
-	useEffect(() => {
-		if (!Object.keys(router.query).length) router.push('/');
-		else {
-			const char = config.characters.find(({ key }) => key === character);
-			if (!char) router.push('/');
+	 useEffect(() => {
+  if (!character) return;
 
-			setEmotions(
-				// @ts-ignore
-				config.emotions[char.emotionKey].filter(
-					(emotion: string | null) => emotion
-				) as string[]
-			);
-		}
-	}, [router, character]);
+  const char = config.characters.find(({ key }) => key === character);
+  if (!char) return;
+
+  setEmotions(
+    config.emotions[char.emotionKey].filter(
+      (emotion: string | null) => emotion
+    ) as string[]
+  );
+}, [character]);
 
 	return (
 		<Page dotBackdrop width='800px'>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 const Meta = () => {
 	return (
 		<Head>
+		  <base href="/0bliv.g1f/" />
 			<title>Omori Gif Generator</title>
 
 			<meta name='title' content='Omori Gif Generator' />

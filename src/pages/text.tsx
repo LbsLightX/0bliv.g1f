@@ -59,8 +59,8 @@ const TextPage: NextPage = () => {
 	);
 
 	useEffect(() => {
-		if (!Object.keys(router.query).length) router.push('/');
-	}, [router]);
+  if (!character || !emotion || !background) return;
+}, [character, emotion, background]);
 
 	const render = async () => {
 		// Disable the button

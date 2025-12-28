@@ -18,15 +18,9 @@ const Character: NextPage = () => {
 				{config.characters.map((character) => (
 					<ImageCard
 						key={character.key}
-						image={`/characters/${character.key}-neutral.png`}
+						image={`./characters/${character.key}-neutral.png`}
 						text={character.name}
-						router={router}
-						route={{
-							pathname: '/emotion',
-							query: {
-								character: character.key,
-							},
-						}}
+						href={`./emotion?character=${character.key}`}
 					/>
 				))}
 			</Grid.Container>

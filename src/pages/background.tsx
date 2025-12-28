@@ -12,8 +12,8 @@ const Background: NextPage = () => {
 	const emotion = router.query.emotion as string;
 
 	useEffect(() => {
-		if (!Object.keys(router.query).length) router.push('/');
-	}, [router]);
+  if (!character || !emotion) return;
+}, [character, emotion]);
 
 	return (
 		<Page dotBackdrop width='800px'>
