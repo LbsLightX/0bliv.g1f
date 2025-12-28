@@ -17,12 +17,11 @@ const Emotion: NextPage = () => {
   const char = config.characters.find(({ key }) => key === character);
   if (!char) return;
 
-  setEmotions(
-    config.emotions[char.emotionKey].filter(
-      (emotion: string | null) => emotion
-    ) as string[]
-  );
-}, [character]);
+setEmotions(
+  (config.emotions[emotionKey] || []).filter(
+    (emotion): emotion is string => Boolean(emotion)
+  )
+);
 
 	return (
 		<Page dotBackdrop width='800px'>
