@@ -5,6 +5,8 @@ module.exports = {
   basePath: '/0bliv.g1f',
   assetPrefix: '/0bliv.g1f/',
 
+  trailingSlash: true,
+
   images: {
     unoptimized: true,
   },
