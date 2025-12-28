@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 			<Center>
 				<Button
 					type='secondary'
-					onClick={() => router.push('/character')}
+					onClick={() => router.push('${router.basePath}/character')}
 				>
 					Go!
 				</Button>
